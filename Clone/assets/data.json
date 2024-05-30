@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Exercise",
+        "tasks": "12 tasks",
+        "image": "./assets/photo1.png" 
+    },
+    {
+        "name": "Study",
+        "tasks": "12 tasks",
+        "image": "./assets/photo2.png" 
+    },
+    {
+        "name": "Code",
+        "tasks": "14 tasks"
+    },
+    {
+        "name": "Cook",
+        "tasks": "15 tasks"
+    },
+    {
+        "name": "Read",
+        "tasks": "15 tasks"
+    },
+    {
+        "name": "Travel",
+        "tasks": "15 tasks"
+    },
+    {
+        "name": "Music",
+        "tasks": "15 tasks"
+    },
+    {
+        "name": "Play",
+        "tasks": "15 tasks"
+    }
+
+
+
+]
