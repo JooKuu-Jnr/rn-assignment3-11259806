@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Image, FlatList, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Image, FlatList,  } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import data from './assets/data.json';
 
@@ -14,7 +14,7 @@ export default function App() {
         return require('./assets/photo2.png');
 
       default:
-        return null; // Fallback for unmatched paths
+        return null; 
     }
   };
   return (
@@ -31,41 +31,49 @@ export default function App() {
         </View>  
 
         <Text >14 tasks today</Text>
-     
+     <View style={styles.flex}>
         <View style={styles.searchBar}>
           <Feather name="search" size={24} color="black" style={styles.searchIcon}/>
           <TextInput 
           placeholder='Search' style={styles.searchText}>
           </TextInput>
-      
-         </View>
 
-         
+          
+         </View>
+         <View style={styles.button}>
+          <Image source={require('./assets/filter.png')} 
+           />
+        </View>
+
+        </View> 
           <Text style={styles.subheaders}>Categories</Text>
           <FlatList 
-          data={data}
+          data={data.firstList}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{gap:20}}
+          contentContainerStyle={{gap:20, marginBottom:12}}
           renderItem={({item}) =>(
                 <View style={styles.rowTasks}>
               <Text style={styles.subheaders2}>{item.name}</Text>
               <Text>{item.tasks}</Text>
               <Image source={getImage(item.image)} style={styles.image} />
-
             </View>
+          )
+        }/>
 
-            
-          )}
-          />
-
-
-          
-
-          
-
-  
-
+          <Text style={styles.subheaders}>Ongoing Tasks</Text>
+          <FlatList 
+          data={data.secondList}
+        
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{gap:20, marginBottom:12}}
+          renderItem={({item}) =>(
+                <View style={styles.columnTasks}>
+              <Text style={styles.subheaders2}>{item.name}</Text>
+              
+            </View>
+          )
+        }/>
 
       </View>    
       
@@ -78,7 +86,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F7F0E8',
     // alignItems: 'center',
     // justifyContent: 'center',
   },
@@ -102,6 +110,18 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,  
     
+  },
+  button:{
+    marginLeft:'auto',
+    marginTop: 22,
+    paddingLeft: 3,
+    backgroundColor: "#FF5F15",
+    borderRadius: 12,
+    width: 40,
+    height: 40, 
+  },
+  flex:{
+    flexDirection:'row'
   },
 
   searchBar:{
@@ -127,12 +147,26 @@ const styles = StyleSheet.create({
   },
 
   rowTasks:{
-    backgroundColor: '#fff',
+    backgroundColor: '#FBF9F7',
     marginTop:12,
-    width:190,
-    height: 190,
+    width:186,
+    height: 192,
     borderRadius: 10,
     padding:10
+  },
+  columnTasks:{
+    flex:1 ,
+    justifyContent:'center',
+    paddingLeft: 15,
+    backgroundColor: '#FBF9F7',
+    borderWidth:1,
+    borderColor:'#E8D1BA',
+    marginTop:12,
+    width:340,
+    height: 128,
+    borderRadius: 15,
+    
+
   }
   
 

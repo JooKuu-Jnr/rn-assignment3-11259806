@@ -1,4 +1,5 @@
-[
+{
+    "firstList":[
     {
         "name": "Exercise",
         "tasks": "12 tasks",
@@ -11,29 +12,99 @@
     },
     {
         "name": "Code",
-        "tasks": "14 tasks"
+        "tasks": "14 tasks",
+        "image": "./assets/photo1.png" 
     },
     {
         "name": "Cook",
-        "tasks": "15 tasks"
+        "tasks": "15 tasks",
+        "image": "./assets/photo2.png" 
     },
     {
         "name": "Read",
-        "tasks": "15 tasks"
+        "tasks": "15 tasks",
+        "image": "./assets/photo1.png" 
     },
     {
         "name": "Travel",
-        "tasks": "15 tasks"
+        "tasks": "15 tasks",
+        "image": "./assets/photo2.png"
     },
     {
         "name": "Music",
-        "tasks": "15 tasks"
+        "tasks": "15 tasks",
+        "image": "./assets/photo1.png" 
     },
     {
         "name": "Play",
-        "tasks": "15 tasks"
+        "tasks": "15 tasks",
+        "image": "./assets/photo2.png"
     }
 
 
 
+],
+"secondList": [
+    {
+        "name": "Mobile App Development"
+    
+    },
+    {
+        "name": "Web Development"
+ 
+    },
+    {
+        "name": "Push Ups"
+
+    },
+    {
+        "name": "Sit Ups"
+
+    },
+    {
+        "name": "Squats"
+
+    },
+    {
+        "name": "Jogging"
+
+    },
+    {
+        "name": "Study"
+
+    },
+    {
+        "name": "Analysing Data"
+
+    },
+    {
+        "name": "Music Practice:"
+
+    },
+    {
+        "name": "Language Learning"
+
+    },
+    {
+        "name": "Professional Development"
+
+    },
+    {
+        "name": "Volunteer Work"
+
+    },
+    {
+        "name": "Creative Writing"
+
+    },
+    {
+        "name": "Finance Management"
+
+    },
+    {
+        "name": "Travel Planning"
+
+    }
+
 ]
+}
